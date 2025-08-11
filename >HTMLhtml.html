@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Intelligence Visualized</title>
+<link rel="stylesheet" href="https://unpkg.com/@uiverse/uiverse.css" />
+<style>
+  :root {
+    --lavender: #E6E6FA;
+    --lavender-2: #DCC6F0;
+    --purple-1: #7C3AED;
+    --purple-2: #5B21B6;
+    --accent-dark: #120B2D;
+    --gold-rich: #FFD700;
+    --gold-deep: #CFAF05;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(
+      to right,
+      var(--lavender),
+      var(--lavender-2),
+      #fddc5c,
+      white
+    );
+    color: var(--accent-dark);
+    scroll-behavior: smooth;
+  }
+  header {
+    background: linear-gradient(
+      to right,
+      var(--lavender),
+      var(--lavender-2),
+      #fddc5c,
+      white
+    );
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+  }
+  nav a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: var(--accent-dark);
+    font-weight: bold;
+    position: relative;
+  }
+  nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background-color: var(--purple-1);
+    transition: width 0.3s;
+  }
+  nav a:hover::after {
+    width: 100%;
+  }
+  section {
+    max-width: 1100px;
+    margin: 3rem auto;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    -webkit-backdrop-filter: blur(20px);
+    background: rgb(255,255,255,0.5);
+  }
+  section:hover {
+    transform: translateY(-5px);
+  }
+  .hero {
+    text-align: center;
+  }
+  .hero h2 {
+    font-size: 2.5rem;
+    color: var(--purple-2);
+  }
+  .hero p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+  
+  #frost{
+    opacity:1;
+  }
+  .links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  .links a {
+    background: var(--purple-1);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  .links a:hover {
+    background: var(--purple-2);
+    transform: scale(1.05);
+  }
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  .card {
+    background: var(--lavender);
+    padding: 1.5rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+  .card:hover {
+    background: #fddc5c;
+    transform: translateY(-5px);
+  }
+  footer {
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+    color: #555;
+    border-top: 1px solid #eee;
+    margin-top: 2rem;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Intelligence Visualized</h1>
+      <p>HS Extracurriculars | CTE | College Readiness</p>
+    </div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#programs">Programs</a>
+      <a href="#cte">CTE</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <div id = "frost">
+        <h2>Join IV for and IVy - get it?</h2>
+        <p>Explore high school extracurriculars, career & technical education pathways, and tools to prepare for college.</p>
+        <div class="links">
+          <a href="#programs">View Programs</a>
+          <a href="#cte">Explore CTE</a>
+          <a href="#contact">Contact Us</a>
+        </div>
+    </div>
+  </section>
+
+  <section id="programs">
+    <h2>Our Programs</h2>
+    <div class="info-grid">
+      <div class="card">
+        <h3>Clubs & Stuff</h3>
+        <p>Join a variety of clubs to develop leadership, teamwork, and creativity.</p>
+      </div>
+      <div class="card">
+        <h3>Online Vids</h3>
+        <p>Watch our online videos at the comfort of your own home to learn skills used in the workplace .</p>
+      </div>
+      <div class="card">
+        <h3>College Prep</h3>
+        <p>Dont know what pathway to join yet? Study with out college prep materials to help you get into the college of your dreams.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="cte">
+    <h2>Career , Technical Education (CTE)</h2>
+    <div class="info-grid">
+      <div class="card">
+        <h3>Technology</h3>
+        <p>Learn coding, robotics, and Engineering skills for the future workplace.</p>
+      </div>
+      <div class="card">
+        <h3>Health Sciences</h3>
+        <p>Prepare for a career in healthcare with hands-on work from people who have been through it before.</p>
+      </div>
+      <div class="card">
+        <h3>Business</h3>
+        <p>Gain knowledge in entrepreneurship, finance, and marketing strategies.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Have questions or want to get join? Reach out to our team.</p>
+    <div class="links">
+      <a href="mailto:intelligencevisualized@gmail.com">Email Us</a>
+      <a href="#home">Back to Top</a>
+    </div>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Intelligence Visualized |
+    <a href="https://www.youtube.com/@intelligencevisualized" target="_blank">YouTube</a> |
+    <a href="https://www.tiktok.com/@intelligence_visualized" target="_blank">TikTok</a>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
